@@ -3,7 +3,7 @@ def hailstone(x)
 
   steps = 0
   until x == 1
-    if x % 2 == 0
+    if x.even?
       x = x / 2
     else
       x = x * 3 + 1
