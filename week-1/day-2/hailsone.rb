@@ -1,18 +1,18 @@
 def hailstone(x)
-  puts x
+  print "#{x} "
 
-  count = 0
+  steps = 0
   until x == 1
     if x % 2 == 0
       x = x / 2
     else
       x = x * 3 + 1
     end
-    puts x
-    count += 1
+    print "#{x} "
+    steps += 1
   end
 
-  puts "Steps: #{count}"
+  return steps
 end
 
-hailstone(20)
+puts hailstone(20)
