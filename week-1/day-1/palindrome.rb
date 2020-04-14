@@ -1,3 +1,4 @@
 def palindrome?(sentence)
-  sentence.downcase.split.join == sentence.downcase.split.join.reverse
+  sentence_without_spaces = sentence.gsub(' ', '').downcase
+  sentence_without_spaces == sentence_without_spaces.reverse
 end
