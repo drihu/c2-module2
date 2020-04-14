@@ -1,3 +1,3 @@
-def bool_to_word bool
+def bool_to_word(bool)
   bool ? 'Yes' : 'No'
 end
