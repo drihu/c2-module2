@@ -7,5 +7,10 @@ interest = gets.chomp.to_f
 print 'Periods: '
 n = gets.chomp.to_i
 
-total = amount * (1 + interest / 100) ** n
-puts total.round(2)
+i = 0
+while i < n
+  amount *= 1 + interest / 100
+  i += 1
+end
+
+puts amount.round(2)
