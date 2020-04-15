@@ -16,7 +16,7 @@ def number_shuffle(number)
         i += 1
       end
     end
-    return new_shuffle
+    return new_shuffle.sort
   else
     return [number]
   end
