@@ -1,9 +1,10 @@
 def count_duplicates(numbers)
-  frequencies = Hash.new(0)
-  numbers.each { |number| frequencies[number] += 1 }
-
+  last_number = 'NaN'
   repeats = 0
-  frequencies.each { |number, times| repeats += times - 1 if times > 1 }
+  numbers.sort.each do |number|
+    repeats += 1 if number == last_number
+    last_number = number
+  end
   repeats
 end
 
