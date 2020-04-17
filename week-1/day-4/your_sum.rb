@@ -7,11 +7,7 @@ class MyArray
 
   def sum(initial_value = 0)
     sum = initial_value
-    if block_given?
-      @array.each { |n| sum += yield(n) }
-    else
-      @array.each { |n| sum += n }
-    end
+    @array.each { |n| sum += block_given? ? yield(n): n }
     sum
   end
 end
