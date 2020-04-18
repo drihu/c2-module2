@@ -1,4 +1,4 @@
-class ScoreTable
+class HighScoreTable
   def initialize(limit)
     @scores = []
     @limit = limit
@@ -17,19 +17,24 @@ class ScoreTable
   end
 end
 
-def HighScoreTable(limit)
-  ScoreTable.new(limit)
-end
-
-highScoreTable = HighScoreTable(3)
-p highScoreTable
-p highScoreTable.scores # []
-highScoreTable.update(10)
-p highScoreTable.scores # [10]
-highScoreTable.update(8)
-highScoreTable.update(12)
-highScoreTable.update(5)
-highScoreTable.update(10)
-p highScoreTable.scores # [12, 10, 10]
-highScoreTable.reset()
-p highScoreTable.scores # []
+high_scores = HighScoreTable.new(3)
+p high_scores.scores # print []
+high_scores.update(10)
+p high_scores.scores # print [10]
+high_scores.update(8)
+high_scores.update(12)
+p high_scores.scores # print [12, 10, 8]
+high_scores.update(5)
+p high_scores.scores # print [12, 10, 8]
+high_scores.update(10)
+p high_scores.scores # print [12, 10, 10]
+high_scores.update(10)
+p high_scores.scores # print [12, 10, 10]
+high_scores.update(20)
+p high_scores.scores # print [20, 12, 10]
+high_scores.update(20)
+p high_scores.scores # print [20, 20, 12]
+high_scores.update(20)
+p high_scores.scores # print [20, 20, 20]
+high_scores.reset()
+p high_scores.scores # print []
