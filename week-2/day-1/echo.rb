@@ -9,13 +9,16 @@ def put_n(string, n)
 end
 
 def echo
-  puts 'What do you want to echo? '
+  puts 'What do you want to echo?'
   string = gets.chomp
-  puts 'How many times do you want to repeat it? '
+  puts 'How many times do you want to repeat it?'
   n = gets.chomp
   n = (n.to_i == n.to_f) ? n.to_i : n.to_f
-
+  puts 'Ok, here it goes:'
   put_n(string, n)
+rescue => e
+  puts "I don't understand how many times do you want to echo the string!"
+  retry
 end
 
 echo
