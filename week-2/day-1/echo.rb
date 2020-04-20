@@ -16,7 +16,7 @@ def echo
   n = (n.to_i == n.to_f) ? n.to_i : n.to_f
   puts 'Ok, here it goes:'
   put_n(string, n)
-rescue => e
+  rescue ArgumentError  => e
   puts "I don't understand how many times do you want to echo the string!"
   retry
 end
