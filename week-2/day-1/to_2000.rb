@@ -1,7 +1,7 @@
 class String
   def to_2000
     letter_index = 0
-    message = self.split('').map.with_index do |char, index|
+    message = self.split('').map do |char|
       if char =~ /[[:alpha:]]/ && letter_index.even?
         letter_index += 1
         char.upcase
