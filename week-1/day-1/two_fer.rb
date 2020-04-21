@@ -1,8 +1,8 @@
 print 'who? '
-name = gets.chomp
+name = gets.chomp.strip
 
-if !name.empty?
+def message(name = 'you')
   puts "One for #{name}, one for me."
-else
-  puts 'One for you, one for me.'
 end
+
+(!name.empty?) ? message(name) : message
