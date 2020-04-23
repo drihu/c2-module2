@@ -1,8 +1,5 @@
 def shorten_to_date(long_date)
-  week_day = long_date.split(' ')[0]
-  month = long_date.split(' ')[1]
-  day = long_date.split(' ')[2].to_i
-  "#{week_day} #{month} #{day}"
+  long_date.split(', ')[0]
 end
 
 p shorten_to_date("Monday February 2, 8pm") # prints "Monday February 2"
