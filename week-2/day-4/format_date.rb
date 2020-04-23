@@ -1,7 +1,7 @@
 require 'date'
 
 def format_date(date)
-  "#{Date::MONTHNAMES[date.month]} #{date.day}, del #{date.year}"
+  date.strftime("%B %d, del %Y")
 end
 
 
