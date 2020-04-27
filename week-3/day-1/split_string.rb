@@ -1,5 +1,5 @@
 def split_string(string)
-  string.scan(/.{1,2}/).map { |str| str.length == 2 ? str : "#{str}_" }
+  string.concat('_').scan(/.{2}/)
 end
 
 p split_string('abcdef') # prints ["ab", "cd", "ef"]
