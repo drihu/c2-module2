@@ -1,5 +1,5 @@
 def increment_string(string)
-  string.gsub(/[\d]+\z/) { |match| (match.empty? ? '1' : match.succ) }
+  string.sub(/[\d]*\z/) { |match| match.empty? ? '1' : match.succ }
 end
 
 p increment_string("foo") # prints "foo1"
